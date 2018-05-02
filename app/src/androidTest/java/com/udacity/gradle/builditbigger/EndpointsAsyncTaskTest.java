@@ -18,7 +18,7 @@ public class EndpointsAsyncTaskTest {
     @Test
     public void testVerifyJoke() throws InterruptedException {
         final CountDownLatch latch = new CountDownLatch(1);
-        EndpointsAsyncTask testTask = new EndpointsAsyncTask() {
+        EndpointsAsyncTask testTask = new EndpointsAsyncTask(null) {
             @Override
             protected void onPostExecute(String result) {
                 if (result != null){

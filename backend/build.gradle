@@ -35,5 +35,5 @@ dependencies {
 }
 
 appengine {  // App Engine tasks configuration
-    tools.cloudSdkHome="/Users/sergey/Documents/google-cloud-sdk/"
+    tools.cloudSdkHome="/Users/sergey/Downloads/google-cloud-sdk/"
 }
