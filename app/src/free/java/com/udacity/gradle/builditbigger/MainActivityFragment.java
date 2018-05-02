@@ -42,18 +42,10 @@ public class MainActivityFragment extends Fragment implements AsyncTaskListener 
                 .build();
         mAdView.loadAd(adRequest);
 
-        mInterstitialAd = new InterstitialAd(getContext());
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
         Button button = root.findViewById(R.id.joke_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                } else {
-                    Log.d("TAG", "The interstitial wasn't loaded yet.");
-                }
                 startAsyncTask();
                 Toast.makeText(getContext(), getString(R.string.loading_text), Toast.LENGTH_SHORT).show();
             }
